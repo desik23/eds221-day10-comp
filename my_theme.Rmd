@@ -1,0 +1,22 @@
+---
+title: "my ggplot theme"
+author: "Desik Somasundaram"
+date: "8/20/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(palmerpenguins)
+library(guavaisland)
+library(pizzawolf)
+```
+
+```{r}
+ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point() +
+  theme_terrible() +
+  theme(plot.background = element_rect(fill = "pink"))
+```
+
